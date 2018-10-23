@@ -9,4 +9,4 @@ Feature: Google search
   Scenario: I can find my swag
     Given I am on the google homepage
     When I search for "Swag"
-    Then I get my "Swags - Google Search"
+    Then I get my "Swag - Google Search"

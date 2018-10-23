@@ -7,7 +7,6 @@ import pages.GooglePage;
 
 import static org.testng.Assert.assertTrue;
 
-
 public class GoogleSteps {
 
     private final GooglePage googlePage;
