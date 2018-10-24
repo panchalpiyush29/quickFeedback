@@ -2,9 +2,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="quickFeedback" thread-count="1" parallel="tests">
     <test name="Google Test">
-        <parameter name = "browser" value= "Chrome" />
         <classes>
-            <class name = "CucumberRunner"/>
+            <class name="CucumberRunner"/>
         </classes>
     </test>
 </suite>

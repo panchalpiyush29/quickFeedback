@@ -5,8 +5,6 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import pages.GooglePage;
 
-import static org.testng.Assert.assertTrue;
-
 public class GoogleSteps {
 
     private final GooglePage googlePage;
@@ -26,8 +24,8 @@ public class GoogleSteps {
         googlePage.enterQuery(searchText);
     }
 
-    @Then("^I get my \"([^\"]*)\"$")
-    public void iGetMy(String expectedPageTitle) {
-        assertTrue(googlePage.verifyPageTitle(expectedPageTitle));
+    @Then("^I get (\\d+) \"([^\"]*)\"$")
+    public void iGet(int expectedSearchResults, String arg0) {
+        googlePage.verifySearchResultRecord(expectedSearchResults);
     }
 }
