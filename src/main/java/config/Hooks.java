@@ -3,7 +3,9 @@ package config;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
-public class Hooks extends CucumberReportBuilder {
+public class Hooks {
+
+    CucumberReportBuilder cucumberReportBuilder;
 
     @BeforeSuite(alwaysRun = true)
     public void setUp() {
@@ -12,7 +14,7 @@ public class Hooks extends CucumberReportBuilder {
 
     @AfterSuite(alwaysRun = true)
     public void tearDown() {
-        reportBuilder().generateReports();
+        cucumberReportBuilder.reportBuilder().generateReports();
         System.out.println("End of suite");
     }
 }

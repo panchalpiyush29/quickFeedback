@@ -9,7 +9,7 @@ import java.util.List;
 
 public class CucumberReportBuilder {
 
-    public ReportBuilder reportBuilder() {
+    public static ReportBuilder reportBuilder() {
         // json files
         List<String> jsonFiles = Collections.singletonList("target/cucumber-json-report.json");
 
